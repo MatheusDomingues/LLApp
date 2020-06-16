@@ -32,9 +32,7 @@ export const Text = styled.Text`
 
 export const Buttons = styled.View`
   flex: 1;
-  background-color: #FCC3C3;
   margin-top: 60px;
-  align-items: center;
 `;
 
 export const ButtonLogin = styled.Text`
@@ -44,6 +42,7 @@ export const ButtonLogin = styled.Text`
   border-radius: 8px;
   height: 50px;
   width: 300px;
+  align-items: center;
   font-weight: bold;
   font-size: 16px;
   padding-top: 12px;
@@ -52,9 +51,11 @@ export const ButtonLogin = styled.Text`
 export const ButtonSignup = styled.Text`
   background-color: #FF6363;
   text-align: center;
+  margin-bottom: 20px;
   border-radius: 8px;
   height: 50px;
   width: 300px;
+  align-items: center;
   font-weight: bold;
   font-size: 16px;
   padding-top: 12px;

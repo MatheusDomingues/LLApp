@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native'
+import { TouchableNativeFeedback } from 'react-native';
 
 import { 
   Wrapper,
@@ -19,7 +21,18 @@ import {
 
 import imgHeader from '../../images/Header.png';
 
-export default function Home() {
+export default function Home({ focused }) {
+
+  const navigation = useNavigation();
+
+  function navigateToSignin() {
+    navigation.navigate('Signin');
+  }
+
+  function navigateToSingup() {
+    navigation.navigate('Signup');
+  }
+
   return (
     <Wrapper>
       <Img source={imgHeader} />
@@ -30,8 +43,17 @@ export default function Home() {
           incididunt non velit. Aute adipisicing quis et elit.</Text>
 
         <Buttons>
-          <ButtonLogin>Sign in</ButtonLogin>
-          <ButtonSignup>Create an account</ButtonSignup>
+            <TouchableNativeFeedback 
+              onPress={() => navigateToSignin()}
+            >
+              <ButtonLogin>Sign in</ButtonLogin>
+            </TouchableNativeFeedback>
+          
+            <TouchableNativeFeedback 
+              onPress={() => navigateToSingup()}
+            >
+              <ButtonSignup>Create an account</ButtonSignup>
+            </TouchableNativeFeedback>
         </Buttons>
 
         <Pages>

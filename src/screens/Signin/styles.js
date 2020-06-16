@@ -6,59 +6,64 @@ export const Wrapper = styled.SafeAreaView`
   margin-top: 80px;
 `;
 
+export const Img = styled.Image`
+  width: 370px;
+  height: 230px;
+`;
+
 export const Content = styled.View`
-  margin-top: 60px;
+  margin-top: 50px;
   height: 80px;
   width: 300px;
 `;
 
-export const Title = styled.Text`
-  font-weight: bold;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 28px;
-`;
-
 export const Text = styled.Text`
-  text-align: center;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
 `;
 
+export const TextInput = styled.TextInput`
+  background-color: #e7e7e7;
+  height: 50px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+`;
 
 export const Buttons = styled.View`
   flex: 1;
-  background-color: #FCC3C3;
-  margin-top: 60px;
-  align-items: center;
+  margin-top: 30px;
 `;
 
 export const ButtonLogin = styled.Text`
-  background-color: #FCC3C3;
+  background-color: #FF6363;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border-radius: 8px;
   height: 50px;
   width: 300px;
+  align-items: center;
   font-weight: bold;
   font-size: 16px;
   padding-top: 12px;
 `;
 
 export const ButtonSignup = styled.Text`
-  background-color: #FF6363;
-  text-align: center;
-  border-radius: 8px;
+  text-align: right;
   height: 50px;
   width: 300px;
   font-weight: bold;
-  font-size: 16px;
-  padding-top: 12px;
+  font-size: 14px;
+  padding: 12px 10px 0 0;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
 `;
 
 export const Pages = styled.View`
   flex-direction: row;
   width: 100px;
-  margin-top: 150px;
+  margin-top: 125px;
   justify-content: space-between;
   align-self: center;
 `;

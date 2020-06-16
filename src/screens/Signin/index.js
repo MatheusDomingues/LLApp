@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { TouchableNativeFeedback } from 'react-native';
 
 import { 
   Wrapper,
+  Img,
   Content,
   Text,
-  Title,
+  TextInput,
   Buttons,
   ButtonLogin,
   ButtonSignup,
@@ -16,18 +19,44 @@ import {
   Page5,
 } from './styles';
 
+import imgHeader from '../../images/Header.png';
+
 export default function Signin() {
+
+  const navigation = useNavigation();
+
+  function navigateToSignin() {
+    navigation.navigate('Signin');
+  }
+
+  function navigateToSingup() {
+    navigation.navigate('Signup');
+  }
+
   return (
     <Wrapper>
+      <Img source={imgHeader} />
 
       <Content>
-        <Title>Welcome to the Fun of Languages!</Title>
-        <Text>Dolore ea elit do Lorem aliquip. Do sint laboris Lorem quis 
-          incididunt non velit. Aute adipisicing quis et elit.</Text>
+        <Text>Username</Text>
+        <TextInput placeholder={'Digite seu nome de Usuário'}></TextInput>
+        <Text>Senha</Text>
+        <TextInput 
+          placeholder={'Digite sua Senha'}
+        ></TextInput>
 
         <Buttons>
-          <ButtonLogin>Sign in</ButtonLogin>
-          <ButtonSignup>Create an account</ButtonSignup>
+            <TouchableNativeFeedback 
+              onPress={() => navigateToSignin()}
+            >
+              <ButtonLogin>Sign in</ButtonLogin>
+            </TouchableNativeFeedback>
+          
+            <TouchableNativeFeedback 
+              onPress={() => navigateToSingup()}
+            >
+              <ButtonSignup>Create an account</ButtonSignup>
+            </TouchableNativeFeedback>
         </Buttons>
 
         <Pages>
