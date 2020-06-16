@@ -68,7 +68,7 @@ export const Pages = styled.View`
   align-self: center;
 `;
 
-export const Page1 = styled.Text`
+export const Page1 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;

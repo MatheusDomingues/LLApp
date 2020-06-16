@@ -39,10 +39,13 @@ export default function Signin() {
 
       <Content>
         <Text>Username</Text>
-        <TextInput placeholder={'Digite seu nome de Usuário'}></TextInput>
+        <TextInput 
+          placeholder={'Digite seu nome de Usuário'}
+        ></TextInput>
         <Text>Senha</Text>
         <TextInput 
           placeholder={'Digite sua Senha'}
+          keyboardType='numeric'
         ></TextInput>
 
         <Buttons>
