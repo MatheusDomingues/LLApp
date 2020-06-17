@@ -45,9 +45,9 @@ export default function Signup() {
 
   function createMyAccount() {
     if(!(username, email, password, phone) == '') {
-      if(!state === false) {
+      if(!state.check === false) {
 
-        Alert.alert('Your account has been created!')
+        Alert.alert('Select a Language: ')
 
         navigation.navigate('LearnLang');
 
@@ -58,7 +58,7 @@ export default function Signup() {
 
     } else {
 
-      Alert.alert('Fill in all de fields');
+      Alert.alert('All the fields must be filled');
     }
   };
 
@@ -80,6 +80,7 @@ export default function Signup() {
           required placeholder={'Ex: MatheusDomingues'} 
           maxLength={20}
           onChangeText={(value) => setUsername(value)}
+          style={{elevation: 2,}}
         ></Input>
 
         <TitleCreate>E-mail</TitleCreate>
@@ -88,6 +89,7 @@ export default function Signup() {
           required 
           placeholder='exemplo@exemplo.com'
           onChangeText={(value) => setEmail(value)}
+          style={{elevation: 2,}}
         ></Input>
 
         <TitleCreate>Password</TitleCreate>
@@ -97,6 +99,7 @@ export default function Signup() {
           placeholder='**********' 
           required
           onChangeText={(value) => setPassword(value)}
+          style={{elevation: 2,}}
         ></Input>
 
         <TitleCreate>Phone number</TitleCreate>
@@ -104,6 +107,7 @@ export default function Signup() {
           keyboardType='numeric' 
           required placeholder='(19) 91919-1919' 
           onChangeText={(value) => setPhone(value)}
+          style={{elevation: 2,}}
         ></Input>
 
         <Box>
@@ -119,16 +123,16 @@ export default function Signup() {
             <TouchableNativeFeedback 
               onPress={() => createMyAccount()}
             >
-              <ButtonSignup>Create my account</ButtonSignup>
+              <ButtonSignup style={{elevation: 4,}}>Create my account</ButtonSignup>
             </TouchableNativeFeedback>
         </Buttons>
 
         <Pages>
-          <Page1></Page1>
-          <Page2></Page2>
-          <Page3></Page3>
-          <Page4></Page4>
-          <Page5></Page5>
+          <Page1 style={{elevation: 1,}}></Page1>
+          <Page2 style={{elevation: 1,}}></Page2>
+          <Page3 style={{elevation: 1,}}></Page3>
+          <Page4 style={{elevation: 1,}}></Page4>
+          <Page5 style={{elevation: 1,}}></Page5>
         </Pages>
       </Content>
     </Wrapper>

@@ -41,18 +41,20 @@ export default function Signin() {
         <Text>Username</Text>
         <TextInput 
           placeholder={'Digite seu nome de Usuário'}
+          style={{elevation: 2,}}
         ></TextInput>
         <Text>Senha</Text>
         <TextInput 
           placeholder={'Digite sua Senha'}
           keyboardType='numeric'
+          style={{elevation: 2,}}
         ></TextInput>
 
         <Buttons>
             <TouchableNativeFeedback 
               onPress={() => navigateToSignin()}
             >
-              <ButtonLogin>Sign in</ButtonLogin>
+              <ButtonLogin style={{elevation: 2,}}>Sign in</ButtonLogin>
             </TouchableNativeFeedback>
           
             <TouchableNativeFeedback 
@@ -63,11 +65,11 @@ export default function Signin() {
         </Buttons>
 
         <Pages>
-          <Page1></Page1>
-          <Page2></Page2>
-          <Page3></Page3>
-          <Page4></Page4>
-          <Page5></Page5>
+          <Page1 style={{elevation: 1,}}></Page1>
+          <Page2 style={{elevation: 1,}}></Page2>
+          <Page3 style={{elevation: 1,}}></Page3>
+          <Page4 style={{elevation: 1,}}></Page4>
+          <Page5 style={{elevation: 1,}}></Page5>
         </Pages>
       </Content>
     </Wrapper>

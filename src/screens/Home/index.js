@@ -46,22 +46,22 @@ export default function Home({ focused }) {
             <TouchableNativeFeedback 
               onPress={() => navigateToSignin()}
             >
-              <ButtonLogin>Sign in</ButtonLogin>
+              <ButtonLogin style={{elevation: 4,}}>Sign in</ButtonLogin>
             </TouchableNativeFeedback>
           
             <TouchableNativeFeedback 
               onPress={() => navigateToSingup()}
             >
-              <ButtonSignup>Create an account</ButtonSignup>
+              <ButtonSignup style={{elevation: 4,}}>Create an account</ButtonSignup>
             </TouchableNativeFeedback>
         </Buttons>
 
         <Pages>
-          <Page1></Page1>
-          <Page2></Page2>
-          <Page3></Page3>
-          <Page4></Page4>
-          <Page5></Page5>
+          <Page1 style={{elevation: 1,}}></Page1>
+          <Page2 style={{elevation: 1,}}></Page2>
+          <Page3 style={{elevation: 1,}}></Page3>
+          <Page4 style={{elevation: 1,}}></Page4>
+          <Page5 style={{elevation: 1,}}></Page5>
         </Pages>
       </Content>
     </Wrapper>
