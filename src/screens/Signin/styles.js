@@ -36,7 +36,7 @@ export const Buttons = styled.View`
   margin-top: 30px;
 `;
 
-export const ButtonLogin = styled.Text`
+export const ButtonLogin = styled.View`
   background-color: #FF6363;
   text-align: center;
   margin-bottom: 10px;
@@ -44,9 +44,12 @@ export const ButtonLogin = styled.Text`
   height: 50px;
   width: 300px;
   align-items: center;
+  padding-top: 12px;
+`;
+
+export const ButtonLoginText = styled.Text`
   font-weight: bold;
   font-size: 16px;
-  padding-top: 12px;
 `;
 
 export const ButtonSignup = styled.Text`
@@ -97,6 +100,13 @@ export const Page4 = styled.View`
 `;
 
 export const Page5 = styled.View`
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #FCC3C3;
+`;
+
+export const Page6 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;

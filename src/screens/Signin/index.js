@@ -10,6 +10,7 @@ import {
   TextInput,
   Buttons,
   ButtonLogin,
+  ButtonLoginText,
   ButtonSignup,
   Pages,
   Page1,
@@ -17,6 +18,7 @@ import {
   Page3,
   Page4,
   Page5,
+  Page6,
 } from './styles';
 
 import imgHeader from '../../images/Header.png';
@@ -54,7 +56,9 @@ export default function Signin() {
             <TouchableNativeFeedback 
               onPress={() => navigateToSignin()}
             >
-              <ButtonLogin style={{elevation: 2,}}>Sign in</ButtonLogin>
+              <ButtonLogin style={{elevation: 2,}} title={'Sign in'}>
+                <ButtonLoginText>Sign in</ButtonLoginText>
+              </ButtonLogin>
             </TouchableNativeFeedback>
           
             <TouchableNativeFeedback 
@@ -70,6 +74,7 @@ export default function Signin() {
           <Page3 style={{elevation: 1,}}></Page3>
           <Page4 style={{elevation: 1,}}></Page4>
           <Page5 style={{elevation: 1,}}></Page5>
+          <Page6 style={{elevation: 1,}}></Page6>
         </Pages>
       </Content>
     </Wrapper>

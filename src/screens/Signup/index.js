@@ -15,22 +15,24 @@ import {
   Box,
   Buttons,
   ButtonSignup,
+  ButtonSignupText,
   Pages,
   Page1,
   Page2,
   Page3,
   Page4,
   Page5,
+  Page6,
 } from './styles'
 
 export default function Signup() {
 
   const navigation = useNavigation();
 
-  const [username, setUsername] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [phone, setPhone] = useState();
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [state, setState] = useState(false);
 
   function onPressed() {
@@ -43,13 +45,13 @@ export default function Signup() {
     navigation.navigate('Signin');
   };
 
-  function createMyAccount() {
+  function navigateToSpeakLang() {
     if(!(username, email, password, phone) == '') {
       if(!state.check === false) {
 
-        Alert.alert('Select a Language: ')
+        Alert.alert('Select which language do you want to learn: ')
 
-        navigation.navigate('LearnLang');
+        navigation.navigate('SpeakLang');
 
       } else {
 
@@ -68,7 +70,8 @@ export default function Signup() {
         <Title>Create your free account</Title>
         <SubTitle>
           <Text>Do you already have an account?</Text>
-          <TouchableNativeFeedback onPress={() => navigateToSignin()}>
+          <TouchableNativeFeedback 
+            onPress={() => navigateToSignin()}>
             <Button>Sign in</Button>
           </TouchableNativeFeedback>
         </SubTitle>
@@ -77,7 +80,8 @@ export default function Signup() {
       <Content>
         <TitleCreate>Username</TitleCreate>
         <Input 
-          required placeholder={'Ex: MatheusDomingues'} 
+          required='required'
+          placeholder={'Ex: MatheusDomingues'} 
           maxLength={20}
           onChangeText={(value) => setUsername(value)}
           style={{elevation: 2,}}
@@ -85,8 +89,9 @@ export default function Signup() {
 
         <TitleCreate>E-mail</TitleCreate>
         <Input 
-          keyboardType='email-address' 
-          required 
+          keyboardType={'email-address'}
+          required='required'
+          autoCapitalize='none'
           placeholder='exemplo@exemplo.com'
           onChangeText={(value) => setEmail(value)}
           style={{elevation: 2,}}
@@ -95,9 +100,9 @@ export default function Signup() {
         <TitleCreate>Password</TitleCreate>
         <Input 
           keyboardType='numeric' 
-          passwordRules
+          secureTextEntry={true}
           placeholder='**********' 
-          required
+          required='required'
           onChangeText={(value) => setPassword(value)}
           style={{elevation: 2,}}
         ></Input>
@@ -105,14 +110,15 @@ export default function Signup() {
         <TitleCreate>Phone number</TitleCreate>
         <Input 
           keyboardType='numeric' 
-          required placeholder='(19) 91919-1919' 
+          placeholder='(19) 91919-1919' 
+          required='required'
           onChangeText={(value) => setPhone(value)}
           style={{elevation: 2,}}
         ></Input>
 
         <Box>
           <CheckBox 
-            required 
+            required='required'
             value={state.check}
             onChange={() => onPressed()}
           />
@@ -121,9 +127,11 @@ export default function Signup() {
 
         <Buttons>
             <TouchableNativeFeedback 
-              onPress={() => createMyAccount()}
+              onPress={() => navigateToSpeakLang()}
             >
-              <ButtonSignup style={{elevation: 4,}}>Create my account</ButtonSignup>
+              <ButtonSignup style={{elevation: 2,}} title={'Create my account'}>
+                <ButtonSignupText>Create my account</ButtonSignupText>
+              </ButtonSignup>
             </TouchableNativeFeedback>
         </Buttons>
 
@@ -133,6 +141,7 @@ export default function Signup() {
           <Page3 style={{elevation: 1,}}></Page3>
           <Page4 style={{elevation: 1,}}></Page4>
           <Page5 style={{elevation: 1,}}></Page5>
+          <Page6 style={{elevation: 1,}}></Page6>
         </Pages>
       </Content>
     </Wrapper>

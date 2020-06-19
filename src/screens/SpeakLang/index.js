@@ -93,29 +93,29 @@ function Item({ id, image, selected, onSelect }) {
   );
 };
 
-export default function LearnLang() {
+export default function SpeakLang() {
 
   const navigation = useNavigation();
 
-  const [learn, setLearn] = useState('');
+  const [speak, setSpeak] = useState('');
 
   const onSelect = (id) => {
-    setLearn(id);
+    setSpeak(id);
   };
 
-  function navigateToLevel() {
-    if(!learn == '') {
-      navigation.navigate('Level');
-      Alert.alert('Congratulate! Your account has been created!');
+  function navigateToLearnLang() {
+    if(!speak == '') {
+      navigation.navigate('LearnLang');
+      Alert.alert('Now, select which language do you want do learn');
     } else {
-      Alert.alert('Select which language do you want to learn');
+      Alert.alert('Select which language do you speak');
     };
   };
 
   return (
     <Wrapper>
       <TitleContent>
-        <Title>I want to learn...</Title>
+        <Title>I speak...</Title>
       </TitleContent>
 
       <Content>
@@ -126,18 +126,18 @@ export default function LearnLang() {
               id={item.id}
               title={item.id}
               image={item.image}
-              selected={learn}
+              selected={speak}
               onSelect={onSelect}
             >
             </Item>
           )}
           keyExtractor={item => item.id}
-          extraData={learn}
+          extraData={speak}
         />
         
         <Buttons >
             <TouchableNativeFeedback 
-              onPress={() => navigateToLevel()}
+              onPress={() => navigateToLearnLang()}
             >
               <ButtonSignup style={{elevation: 2,}} title={'Next'}>
                 <ButtonSignupText>Next</ButtonSignupText>

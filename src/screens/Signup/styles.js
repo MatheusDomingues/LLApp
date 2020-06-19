@@ -65,7 +65,7 @@ export const Buttons = styled.View`
   align-items: center;
 `;
 
-export const ButtonSignup = styled.Text`
+export const ButtonSignup = styled.View`
   background-color: #FF6363;
   color: #fff;
   text-align: center;
@@ -74,9 +74,12 @@ export const ButtonSignup = styled.Text`
   height: 50px;
   width: 300px;
   align-items: center;
+  padding-top: 12px;
+`;
+
+export const ButtonSignupText = styled.Text`
   font-weight: bold;
   font-size: 16px;
-  padding-top: 12px;
 `;
 
 export const Pages = styled.View`
@@ -116,6 +119,13 @@ export const Page4 = styled.View`
 `;
 
 export const Page5 = styled.View`
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #FCC3C3;
+`;
+
+export const Page6 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;

@@ -59,6 +59,7 @@ export const Buttons = styled.View`
 export const ButtonSignup = styled.View`
   height: 50px;
   width: 100px;
+
   padding: 12px 10px 0 0;
   border-radius: 10px;
   background-color: #FF6363;
@@ -70,7 +71,6 @@ export const ButtonSignupText = styled.Text`
   text-align: center;
   color: #fff;
 `;
-
 
 export const Pages = styled.View`
   flex-direction: row;
@@ -105,14 +105,14 @@ export const Page4 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FCC3C3;
+  background-color: #FF6363;
 `;
 
 export const Page5 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FF6363;
+  background-color: #FCC3C3;
 `;
 
 export const Page6 = styled.View`
