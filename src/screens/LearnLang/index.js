@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { FlatList, TouchableNativeFeedback, Alert } from 'react-native';
+import { TouchableNativeFeedback, FlatList, Alert } from 'react-native';
 
 import {
   Wrapper,
@@ -84,7 +84,7 @@ function Item({ id, image, selected, onSelect }) {
             backgroundColor: 
               id === selected 
               ? '#FF6363' 
-              : '#e8e8e8'}}>
+              : '#eeeeee'}}>
           <Image source={image} />
           <Text>{id}</Text>
         </Card>
@@ -106,9 +106,8 @@ export default function LearnLang() {
   function navigateToLevel() {
     if(!learn == '') {
       navigation.navigate('Level');
-      Alert.alert('Congratulate! Your account has been created!');
     } else {
-      Alert.alert('Select which language do you want to learn');
+      Alert.alert('Select a language');
     };
   };
 
@@ -135,7 +134,7 @@ export default function LearnLang() {
           extraData={learn}
         />
         
-        <Buttons >
+        <Buttons>
             <TouchableNativeFeedback 
               onPress={() => navigateToLevel()}
             >

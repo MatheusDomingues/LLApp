@@ -48,18 +48,11 @@ export default function Signup() {
   function navigateToSpeakLang() {
     if(!(username, email, password, phone) == '') {
       if(!state.check === false) {
-
-        Alert.alert('Select which language do you want to learn: ')
-
         navigation.navigate('SpeakLang');
-
       } else {
-
         Alert.alert('Do you have to accept de terms and privacy policy');
       }
-
     } else {
-
       Alert.alert('All the fields must be filled');
     }
   };

@@ -16,78 +16,72 @@ export const Title = styled.Text`
   font-size: 32px;
 `;
 
-export const SubTitle = styled.View`
+export const Content = styled.View`
+  flex: 1;
+  width: 350px;
+  margin-top: 20px;
+  
+`;
+
+export const Cards = styled.View`
+  border-radius: 10px;
+  margin-bottom: 10px;
+`;
+
+export const Card = styled.View`
+  margin: 13px 10px 13px;
   flex-direction: row;
-  margin-top: 10px;
+  border-radius: 8px;
+  height: 140px;
+  align-items: center;
+`;
+
+export const ImageContent = styled.View`
+  background-color: #e5e5e5;
+  align-items: center;
+  margin-left: 15px;
+  width: 120px;
+  border-radius: 20px;
+`;
+
+export const Image = styled.Image`
+  width: 80px;
+  height: 120px;
 `;
 
 export const Text = styled.Text`
-  font-size: 14px;
-  margin-right: 5px;
-`;
-
-export const Button = styled.Text`
-  color: #FF6363;
-  text-decoration: underline;
   font-weight: bold;
-`;
-
-export const Content = styled.View`
-  width: 350px;
-  margin-top: 30px;
-`;
-
-export const TitleCreate = styled.Text`
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-`;
-
-export const Input = styled.TextInput`
-  background-color: #e7e7e7;
-  height: 50px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  padding-left: 20px;
-`;
-
-export const Box = styled.View`
-  margin-top: 5px;
-  margin-left: 5px;
-  flex-direction: row;
-  align-items: center;
+  margin-left: 30px;
 `;
 
 export const Buttons = styled.View`
-  flex: 1;
-  margin-top: 20px;
-  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  align-items: flex-end;
 `;
 
 export const ButtonSignup = styled.View`
-  background-color: #FF6363;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 10px;
-  border-radius: 8px;
   height: 50px;
-  width: 300px;
-  align-items: center;
-  padding-top: 12px;
+  width: 100px;
+  padding: 12px 10px 0 0;
+  border-radius: 10px;
+  background-color: #FF6363;
 `;
 
 export const ButtonSignupText = styled.Text`
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
 `;
 
 export const Pages = styled.View`
   flex-direction: row;
   width: 100px;
-  margin-top: 80px;
   justify-content: space-between;
   align-self: center;
+  margin-bottom: 30px;
 `;
 
 export const Page1 = styled.View`
@@ -101,7 +95,7 @@ export const Page2 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FF6363;
+  background-color: #FCC3C3;
 `;
 
 export const Page3 = styled.View`
@@ -122,7 +116,7 @@ export const Page5 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FCC3C3;
+  background-color: #FF6363;
 `;
 
 export const Page6 = styled.View`

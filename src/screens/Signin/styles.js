@@ -82,7 +82,7 @@ export const Page2 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FF6363;
+  background-color: #FCC3C3;
 `;
 
 export const Page3 = styled.View`
@@ -110,5 +110,5 @@ export const Page6 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FCC3C3;
+  background-color: #FF6363;
 `;

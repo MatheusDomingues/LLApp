@@ -31,7 +31,6 @@ export const Cards = styled.View`
 export const Card = styled.View`
   margin: 13px 10px 13px;
   flex-direction: row;
-  background-color: #e8e8e8;
   border-radius: 8px;
   height: 60px;
   align-items: center;
@@ -105,14 +104,14 @@ export const Page4 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FCC3C3;
+  background-color: #FF6363;
 `;
 
 export const Page5 = styled.View`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #FF6363;
+  background-color: #FCC3C3;
 `;
 
 export const Page6 = styled.View`

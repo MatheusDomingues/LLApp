@@ -27,8 +27,8 @@ export default function Signin() {
 
   const navigation = useNavigation();
 
-  function navigateToSignin() {
-    navigation.navigate('Signin');
+  function navigateToProfile() {
+    navigation.navigate('Profile');
   }
 
   function navigateToSingup() {
@@ -49,12 +49,13 @@ export default function Signin() {
         <TextInput 
           placeholder={'Digite sua Senha'}
           keyboardType='numeric'
+          secureTextEntry={true}
           style={{elevation: 2,}}
         ></TextInput>
 
         <Buttons>
             <TouchableNativeFeedback 
-              onPress={() => navigateToSignin()}
+              onPress={() => navigateToProfile()}
             >
               <ButtonLogin style={{elevation: 2,}} title={'Sign in'}>
                 <ButtonLoginText>Sign in</ButtonLoginText>
